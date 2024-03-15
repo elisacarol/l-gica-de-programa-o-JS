@@ -19,7 +19,8 @@ console.log(`A soma dos números é ${numero1 + numero2}`);
 console.log(`A subtracao dos números é ${numero1 - numero2}`);
 console.log(`A multiplicacao dos números é ${numero1 * numero2}`);
 console.log(`A divisao dos números é ${numero1 / numero2}`);
-console.log(`A resto dos números é ${numero1 % numero2}`);
+console.log(`O resto da divisão dos números è ${numero 1 % numero2}`)`;
+console.log(`O número elevado à potencia do numero 2 é ${numero1 ** numero2}`);
 ~~~
 
 
@@ -29,7 +30,8 @@ Em cada uma das operações temos um operador aritmético:
 * `-` -> subtração
 * `*` -> multiplicação
 * `/` -> divisão
-* `%` -> resto
+* `%` -> resto da divisão
+* `**`-> potenciação
 
 ## operadores-atribuicao.js
 
@@ -37,7 +39,7 @@ Em cada uma das operações temos um operador aritmético:
 let numero = 10;
 
 ~~~
-Declaramos a variavel `numero`usando a palavra `let, pois essa variável sera **reatribuída** ao longo do nosso código.
+Declaramos a variavel **numero** usando a palavra **let**, pois essa variável sera **reatribuída** ao longo do nosso código.
 
 Em seguida, fazemos uma série de reatribuições usando os operadores de atribuição:
 
@@ -48,19 +50,20 @@ console.log(`reatribuindo e subtraindo 10: ${numero -=10}`);
 console.log(`reatribuindo e multiplicando 10: ${numero *=10}`);
 console.log(`reatribuindo e dividindo 10: ${numero /=10}`);
 console.log(`reatribuindo para o resto da divisão por 10:
-${numero = numero %= 10}`);
+${numero %= 10}`);
 console.log(`Incrementando o número em 1: ${++numero}`);
 console.log(`Decrementando o número em 1: ${--numero}`);
 console.log(`O número final é igual a ${(numero)}`);
 ~~~
 
 Operadores de atribuição:
-
+* `=` -> atribuição de um valor à variável
 * `+=` -> atribuição com soma
 * `-=` -> atribuição com subtração
 * `*=` -> atribuição com multiplicação
-* `/=` -> atribuição com divisão< >
-* `$=` -> atribuição com resto de divisão
+* `/=` -> atribuição com divisão
+* `**` -> atribuição com potenciação
+* `%=` -> atribuição com resto de divisão
 * `++` -> atribuição com **incremento 1** (pode ser pré ou pós incrementado).
 Ex. `numero ++` (pós-incremento) ou `numero ++` pré-incremento.
 * `--` -> atribuição com **decremento 1**  (pode ser pré ou pós decramentado).
@@ -82,19 +85,28 @@ if (condicao){;
 ~~~
 Esta estrutura exibe no console se a condição testada é verdadeira ou falsa.
 A condição armazena o resultado da **comparação entre duas variáveis**, como
-segue
+segue:
 
 ~~~js
+    const a = `a`, b = `A`
+    const condicao = a == b;
+
+~~~
+Operadores de comparação
+~~~js
 * `==` -> é igual
-* `===` -> é estritamente igual *(valor e tipo)*
-* `!==` -> não é estritamente igual *(valor e tipo)*
-* `!=` -> não é igual 
+* `!=` -> não é igual         
 * `>` -> maior que
 * `<` -> menor que
 * `>=` -> maior ou igual
 * `<=` -> menor ou igual 
+* `===`-> é estritamente igual (Valor E tipo)
+* `!==`-> não é estritamente igual (Valor OU tipo)
 
-~~~js
+
+~~~
+
+## desafio 1.js
 
 Escreva um código em JavaScript que resolva o problema descrito no livro
 Logica da Programação de Programação I, pag.20 , em que o tema que obter 3 notas
@@ -103,11 +115,51 @@ para exame.Não é necessário ler as notas, você pode defini-las com variávei
 
 Você precisará utilizar uma estrutura de decisão composta como a seguir:
 
-~~~
+
 
 ~~~js
 if (condicao) {
     // codigo da condicao//
 }else if (condicao){
-
+    // codigo da condição2
+} else {
+    // codigo se nenhuma das condições for verdadeira
 }
+
+~~~
+
+
+## desafio2.js
+
+Crie um programa que calcule o indice de Massa Corporal (IMC) de uma pessoa.
+
+Orientações:
+
+    * Utilize o método **prompt()** do objeto **window** para realizar a leitura dos dados de
+    entrada.
+    * Utilize a fórmula IMC=peso/altura2 para calcular o IMC.
+    * Utilize a estrutura **if-else* para classificar o IMC de acordo com a tabela da OMS.
+
+        IMC         Indicação
+
+    Abaixo de 18,5  Abaixo do peso
+
+    18,5 - 24,9     Peso normal
+
+    25,0 - 29,9     Sobrepeso
+
+    20,0 - 34,9     Obesidade grau I
+
+    35,0 - 39,9     Obesidade grau II
+
+    Acima de 40,0   Obesidade grau III
+
+    Observações:
+    O IMC é apenas uma medida geral e não leva emc consideração a composição corporal (músculos versus gordura)
+    Pessoas com muita massa muscular podem ter um IMC alto, mesmo que não sejam obesas.É importante consultar um 
+    médico ou nutricionista para uma avaliação individualizada. 
+
+    Para mais informações: 
+
+    Organização Mundial da Saúde (OMS):https://www.who.int/pt/about
+    
