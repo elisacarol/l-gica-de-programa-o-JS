@@ -59,9 +59,55 @@ Operadores de atribuição:
 * `+=` -> atribuição com soma
 * `-=` -> atribuição com subtração
 * `*=` -> atribuição com multiplicação
-* `/=` -> atribuição com divisão
+* `/=` -> atribuição com divisão< >
 * `$=` -> atribuição com resto de divisão
 * `++` -> atribuição com **incremento 1** (pode ser pré ou pós incrementado).
 Ex. `numero ++` (pós-incremento) ou `numero ++` pré-incremento.
 * `--` -> atribuição com **decremento 1**  (pode ser pré ou pós decramentado).
 Ex `numero --` (pós-decremento) ou `-- numero`(pré-decremento)
+
+
+## operadores-comparação.js
+
+
+Neste arquivo conhecemos os operadores de comparação e a estrutura
+lógica da decisão **if-else**
+
+~~~js
+if (condicao){;
+    console.log (`VERDADEIRO`);
+}else{
+    console.log (`FALSO`);
+}
+~~~
+Esta estrutura exibe no console se a condição testada é verdadeira ou falsa.
+A condição armazena o resultado da **comparação entre duas variáveis**, como
+segue
+
+~~~js
+* `==` -> é igual
+* `===` -> é estritamente igual *(valor e tipo)*
+* `!==` -> não é estritamente igual *(valor e tipo)*
+* `!=` -> não é igual 
+* `>` -> maior que
+* `<` -> menor que
+* `>=` -> maior ou igual
+* `<=` -> menor ou igual 
+
+~~~js
+
+Escreva um código em JavaScript que resolva o problema descrito no livro
+Logica da Programação de Programação I, pag.20 , em que o tema que obter 3 notas
+de um aluno, calcular a média e exibir se o aluno foi aprovado, reprovado ou se ficou
+para exame.Não é necessário ler as notas, você pode defini-las com variáveis.
+
+Você precisará utilizar uma estrutura de decisão composta como a seguir:
+
+~~~
+
+~~~js
+if (condicao) {
+    // codigo da condicao//
+}else if (condicao){
+
+}

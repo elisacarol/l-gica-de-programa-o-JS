@@ -13,6 +13,7 @@ console.log(`A subtracao dos números é ${numero1 - numero2}`);
 console.log(`A multiplicacao dos números é ${numero1 * numero2}`);
 console.log(`A divisao dos números é ${numero1 / numero2}`);
 console.log(`A resto dos números é ${numero1 % numero2}`);
+console.log(`O número 1 elevado a potencia do número2 ${numero1 ** numero2}`);`
 
 /*como fazer o teste manual deste código? tem duas opções: 1 incorporo ele no arquivo HTML ou
 no Node*/
