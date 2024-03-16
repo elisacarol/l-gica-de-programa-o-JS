@@ -5,6 +5,7 @@ if (condicao) {
     console.log(`VERDADEIRO`);
 }else{
     console.log(`FALSO`);
+}
     
     //Operadores de comparação
     // == é igual
