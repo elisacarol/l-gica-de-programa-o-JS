@@ -1,26 +1,31 @@
-const peso = window.prompt(`Qual o seu peso?`);
-const altura = window.prompt(`Qual a sua altura?`);
-const IMC = (peso / altura ** altura);
+const peso = window.prompt(`Digite seu peso:`);
+const altura = window.prompt(`Digite sua altura:`);
+const imc = peso / altura ** 2;
 
-    if (IMC <=18.5){
-        console.log(`ABAIXO DO PESO`, IMC);  
+    if (imc < 18.5){
+        window.alert(`IMC: ${imc.toFixed(1)} --> Abaixo do Peso`);  
     }
-    else if (IMC >=18.5 <= 24.90){ // QUANDO TRABALHAR COM FAIXAS PRECISA VERIFICAR A INCLUSÃO//
-        console.log(`PESO NORMAL`, IMC); // PORQUE O LIMITE INFERIOR PRECISA SER " PELO MENOS IGUAL"//
-    }                                    // ARREDONDAR PARA 25.0 AUXILIA NO ARREDONDAMENTO CASO SEJA   
-    else if (IMC =25.0 <=29.9){          // 24.91 ATÉ 24.999999//     
-        console.log(`SOBREPESO`, IMC);
-    }
-    else if (IMC =30 <=34.9){
-        console.log(`OBESIDADE GRAU`,IMC);
-    }
-    else if (IMC = 35.0 <= 39.9){
-        console.log(`OBESIDADE GRAU II`, IMC);
-    }
-    else  (IMC < 40.0){ // no último nao colocar o ELSE IF//
-        console.log(`OBESIDADE GRAU III`, IMC);
+
+    else if (imc < 25){                                           // QUANDO TRABALHAR COM FAIXAS PRECISA VERIFICAR A INCLUSÃO//
+        window.alert(`IMC: ${imc.toFixed(1)} --> Peso normal`);   // PORQUE O LIMITE INFERIOR PRECISA SER " PELO MENOS IGUAL"//
+    }                                                               // ARREDONDAR PARA 25.0 AUXILIA NO ARREDONDAMENTO CASO SEJA   
+   
+    else if (imc < 30){                                            // 24.91 ATÉ 24.999999//     
+        window.alert(`IMC: ${imc.toFixed(1)} --> Sobrepeso`);
     }
     
+    else if (imc < 35){                                      
+        window.alert(`IMC: ${imc.toFixed(1)} --> Obesidade grau I`);
+    }
+    
+    else if (imc < 40){                                             // no último nao colocar o ELSE IF//
+        window.alert(`IMC: ${imc.toFixed(1)}  --> Obesidade grau II`);
+    }
+
+    else {
+        window.alert(`ÌMC: ${imc.toFixed(1)}  --> Obesidade grau III`);
+    }
+     
  
 //const altura=1.79;
 //const peso= 7
