@@ -162,4 +162,26 @@ Orientações:
     Para mais informações: 
 
     Organização Mundial da Saúde (OMS):https://www.who.int/pt/about
-    
+
+
+## desafio3.js
+
+Criar um converso de temperatura entre as escalas Celsius, Fahrenneit e Kelvin. O usuário
+deve digita a temperatura e ser convertida,  e a escala de temperatura atual e a escala para o qual o valor deve ser convertido.
+
+Entrada: valor atual da temperatura, escala atual da temperatura e a escala para exibição (conversão).
+
+Saída (1): Valor convertido e  escala de conversão.
+
+Fórmulas: 
+
+De / Para / Fórmula 
+--- | --- | ----
+Celsius | Fahrenneit | TF = (TC * 9/5) + 32
+Celsius |Kelvin | TK = TC + 273.15
+Farhenneit |Celsius |TC = (TF - 32) * 5/9
+Farhenneit | Kelvin | TK = (TF + 459.67) * 5/9
+Kelvin | Celsius | TC = TK -  273.15
+Kelvin | Farhenneit | TF = Tk * 9/5 - 459.67
+T = 
+)
