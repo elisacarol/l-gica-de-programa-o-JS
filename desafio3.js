@@ -1,32 +1,25 @@
-let 
-temperatura_atual = window.prompt(`Digite a temperatura atual:`);
-conversao_escala = window.prompt (`Converter para qual escala?` escala_temperatura);
-escala_temperatura = TC , TF , TK;
 
-if (conversao TC for TF) {
-    console.log(`escala_temperatura: ${(TC * 9/5) + 32}`);
+const temperatura_atual = parsefloat(window.prompt(`Digite a temperatura atual:`)); 
+const cala_temperatura_atual = parsefloat(window.prompt (`Digite a escala temperatura atual:`));
+const conversao_escala = parsefloat(window.prompt (`Converter para qual escala?`));
+const escala_temperatura = celsius, fahrenheit, kelvin;
+
+if (`escala_temperatura_atual = celsius`){
+    conversao (`conversao_escala_Fahrenheit ${(celsius * 9/5) + 32} && 
+    conversao_escala_Kelvin ${celsius - 273.15}`);
 }
 
-else if (conversao TC for TK) {
-    console.log(`escala_temperatura: ${TC - 273.15}`);
+else if (`escala_temperatura_atual = fahrenheit`){
+    conversao (`conversao_escala Celsius: ${(fahrenheit - 32) * 5/9} && 
+    conversao_escala_Kelvin: ${(fahrenheit + 459.67) * 5/9}`);
 }
 
-else if (conversao TF for TC) {
-    console.log(`escala_temperatura: ${(TF - 32) * 5/9}`);
+else(`escala_temperatura_atual = kelvin`){
+    conversao (`conversao_escala celsius: ${(kelvin - 273.15} && 
+    conversao_escala_fahrenheit: ${(kelvin * 9/5) - 459.67}`); 
 }
 
-else if (conversao TF for TK) {
-    console.log(`escala_temperatura: ${(TF + 459.67) * 5/9}`);
-}
-
-else if (conversao TK for TC) {
-    console.log(`escala_temperatura: ${TK - 273.15}`);
-}
-
-else (conversao TF for TK) {
-    console.log(`escala_temperatura: ${(TK * 9/5) - 459.6}`);
-}
-
+window.alert(`A temperatura convertida é ${conversao_escala});
 
 
 
