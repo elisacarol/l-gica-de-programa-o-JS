@@ -183,5 +183,17 @@ Farhenneit |Celsius |TC = (TF - 32) * 5/9
 Farhenneit | Kelvin | TK = (TF + 459.67) * 5/9
 Kelvin | Celsius | TC = TK -  273.15
 Kelvin | Farhenneit | TF = Tk * 9/5 - 459.67
-T = 
-)
+
+## Problema adicional
+
+Como executar dois "programas" na mesma página?
+
+## desafio4.js
+
+Desenvolva o programa do desafio 3 em uma página HTML, obtendo os dados a partir de um 
+formulário e exibindo o resultado na mesma página.
+
+* Utilize uma tag <input> para obter a temperatura;
+* Utilize tags <select> para selecionar as escalas atual e de conversão;
+* Utilize um botão para calcular a temperatura;
+* Apresente o resultado logo abaixo do formulário. 

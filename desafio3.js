@@ -1,23 +1,68 @@
-const temperatura = parseFloat(window.prompt(`Digite a temperatura:`)); 
-const escalaEntrada = window.prompt(`Digite a escala atual: C, F , K `);
-const conversao_escala = window.prompt(`Converter para qual escala: C, F, K`);
+const 
+temperaturaAtual = parseFloat(window.prompt(`Digite a temperatura:`)); 
 
-if (escalaEntrada === C){
-     (F = ${(temperatura * 9/5) + 32} || 
-     MediaKeySystemAccess={} = ${temperatura - 273.15});
+
+if (!isNaN (temperaturaAtual)) {
+
+
+    const
+    escalaAtual = window.prompt(`Digite a escala atual: \nC -> Celsius, F -> Fahrenheit, K -> Kelvin`).toUpperCase(),
+                                                            // PQ \nC e no final ()?
+    escalaConversao = window.prompt(`Digite a escala para conversão: \nC -> Celsius, F -> Fahrenheit, K -> Kelvin`).toUpperCase ();
+
+if (escalaAtual === 'C') {
+
+    if (escalaConversao === 'K') {
+        window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${temperaturaAtual + 273.15} em ${escalaConversao}`);
+
+    } else if (escalaConversao === 'F'){
+        window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${(temperaturaAtual * 9 / 5) + 32} em ${escalaConversao}`);
+    
+    } else if (escalaConversao === 'C'){
+        window.alert(`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+
+    } else {
+        window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
+
+    }
+ 
+} else if (escalaAtual === 'F') {
+
+    if (escalaConversao === 'K') {
+        window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${(temperaturaAtual + 459.67) * 5 / 9} em ${escalaConversao}`);
+        
+    } else if (escalaConversao === 'C') {
+        window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${(temperaturaAtual - 32) * 5 / 9} em ${escalaConversao}`);
+            
+    } else if (escalaConversao === 'F'){
+        window.alert(`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+        
+    } else {
+        window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
+    
+    }
+
+} else if (escalaAtual === 'K') {
+
+    if (escalaConversao === 'C') {
+        window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${temperaturaAtual - 273.15} em ${escalaConversao}`);
+        
+    } else if (escalaConversao === 'F') {
+        window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${temperaturaAtual * 5 / 9 - 459.67} em ${escalaConversao}`);
+            
+    } else if (escalaConversao === 'K'){
+        window.alert(`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+        
+    } else {
+        window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
+    
+    }
+
+} else {
+        window.alert (`Escala selecionada: ${escalaAtual}. A escala ATUAL não existe ou não está disponível neste programa.`);
+
 }
 
-else if (escalaEntrada === F){
-    (C = ${(temperatura - 32) * 5/9} || 
-     K = ${(temperatura + 459.67) * 5/9});
+} else {
+        window.alert(`O número digitado para conversão não é número válido.`);
 }
-
-else (escalaEntrada === K) {
-    (C = ${temperatura - 273.15} ||
-    F = ${(temperatura * 9/5) - 459.67}; 
-}
-
-window.alert(`A temperatura convertida é);
-
-
-
