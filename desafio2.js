@@ -1,4 +1,6 @@
-const peso = window.prompt(`Digite seu peso:`);
+function calcule IMC () {
+
+    const peso = window.prompt(`Digite seu peso:`);
 const altura = window.prompt(`Digite sua altura:`);
 const imc = peso / altura ** 2;
 
