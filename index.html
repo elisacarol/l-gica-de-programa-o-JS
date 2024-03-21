@@ -7,9 +7,34 @@
     </head>
     <body>
         <h1> Programinhas</h1>
-        <button type="button""  onclick calculaIMC()>Calculador IMC</button>
-        <button type="button"onclick>Conversor Temperatura</button>
+        <button type="button" onclick=Animation()>Calculador IMC</button>
+        <button type="button" onclick="convertetemperatura">Conversor Temperatura</button>
+        
+        <h2>Calculadora IMC</h2>
+
+        <label for="peso:"></label>
+        <input type="number" id="peso" step="0.5" min="0" max="1000"> 
+
+        <label for="altura"></label>
+        <input type="number" id="altura" step="0.01" min="0" max="3.0">
+
+        <button type="button" id="btCalcimc">"Calcular IMC</button>
+        <button type="reset">"Limpar"</button>
+
         <script src="desafio2.js"></script>
         <script src="desafio3.js"></script>
+
+        <script>
+            document.querySelector(`bicalcimc´).additEventListener (´click´
+            function(){
+                const peso = document.querySelector (#peso).value
+                const altura = document.querySelector (#altura).value;
+                const imc = calcularIMC ()
+                console.log (imc);
+                
+                
+            }
+
+        </script>
     </body>
 </html>

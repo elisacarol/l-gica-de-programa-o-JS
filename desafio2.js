@@ -1,32 +1,36 @@
-function calcule IMC () {
+function calculeIMC(peso,altura) {
 
-    const peso = window.prompt(`Digite seu peso:`);
+const peso = window.prompt(`Digite seu peso:`);
 const altura = window.prompt(`Digite sua altura:`);
 const imc = peso / altura ** 2;
+let mensagem;
 
     if (imc < 18.5){
-        window.alert(`IMC: ${imc.toFixed(1)} --> Abaixo do Peso`);  
+        mensagem = (`IMC: ${imc.toFixed(1)} --> Abaixo do Peso`);  
     }
 
     else if (imc < 25){                                           // QUANDO TRABALHAR COM FAIXAS PRECISA VERIFICAR A INCLUSÃO//
-        window.alert(`IMC: ${imc.toFixed(1)} --> Peso normal`);   // PORQUE O LIMITE INFERIOR PRECISA SER " PELO MENOS IGUAL"//
+        mensagem =(`IMC: ${imc.toFixed(1)} --> Peso normal`);   // PORQUE O LIMITE INFERIOR PRECISA SER " PELO MENOS IGUAL"//
     }                                                               // ARREDONDAR PARA 25.0 AUXILIA NO ARREDONDAMENTO CASO SEJA   
    
     else if (imc < 30){                                            // 24.91 ATÉ 24.999999//     
-        window.alert(`IMC: ${imc.toFixed(1)} --> Sobrepeso`);
+        mensagem = (`IMC: ${imc.toFixed(1)} --> Sobrepeso`);
     }
     
     else if (imc < 35){                                      
-        window.alert(`IMC: ${imc.toFixed(1)} --> Obesidade grau I`);
+        mensagem = (`IMC: ${imc.toFixed(1)} --> Obesidade grau I`);
     }
     
     else if (imc < 40){                                             // no último nao colocar o ELSE IF//
-        window.alert(`IMC: ${imc.toFixed(1)}  --> Obesidade grau II`);
+        mensagem = (`IMC: ${imc.toFixed(1)}  --> Obesidade grau II`);
     }
 
     else {
-        window.alert(`ÌMC: ${imc.toFixed(1)}  --> Obesidade grau III`);
+        mensagem = (`ÌMC: ${imc.toFixed(1)}  --> Obesidade grau III`);
     }
+
+    return mensagem;
+}
      
  
 //const altura=1.79;
