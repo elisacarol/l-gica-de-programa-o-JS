@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1> Programinhas</h1>
-        <button type="button" onclick=Animation()>Calculador IMC</button>
+        <button type="button" onclick="calculaIMC()">Calculador IMC</button>
         <button type="button" onclick="convertetemperatura">Conversor Temperatura</button>
         
         <h2>Calculadora IMC</h2>
@@ -25,15 +25,15 @@
         <script src="desafio3.js"></script>
 
         <script>
-            document.querySelector(`bicalcimc´).additEventListener (´click´
+            document.querySelector('btCalcIMC').addEventListener ('click', 
             function(){
-                const peso = document.querySelector (#peso).value
-                const altura = document.querySelector (#altura).value;
-                const imc = calcularIMC ()
+                const peso = document.querySelector ('#peso').value;
+                const altura = document.querySelector ('#altura').value;
+                const imc = calcularIMC(peso, altura)
                 console.log (imc);
                 
                 
-            }
+            });
 
         </script>
     </body>
