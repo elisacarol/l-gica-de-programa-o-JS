@@ -18,19 +18,19 @@
         <label for="altura">Altura:</label>
         <input type="number" id="altura" step="0.01" min="0" max="3.0">
 
-        <button type="button" id="btCalcIMC">Calcular IMC:</button>
+        <button type="button" id="btCalcIMC">Calcular IMC</button>
         <button type="reset" id="btlimpaIMC">Limpar</button>
         <!-- ESTA PODERIA SER UMA OUTRA FORMA DE MOSTRAR O RESULTADO
-            querySelector('#resultado').innerHTML = '';Limpar</button>
+            <button type="reset" id="btLimpaIMC" onclick="document.querySelector('#resultadoIM').innweHRML = '';>Limpar</button>-->
     
-    </form>
+        </form>
 
     <div id="resultadoIMC"></div><!--DENTRO DESTE ID NÃO COLOCAREMOS NADA PORQUE SERÁ O JS QUE COLOCARÁ-->
 
     <h2> Conversor de Temperatura</h2>
 
     <form action="">
-        <label for="valorTemperatura">Temperatura</label>
+        <label for="valorTemperatura">Temperatura:</label>
         <input type="number" id="valorTemperatura">
 
         <label for="escalaAtual">De:</label>
@@ -39,22 +39,24 @@
             <option value="K">Kelvin</option>
     </select>
 
-    <label for="escalaConvertida">Temperatura</label>
-        <input type="number" id="valorTemperatura">
-
-        <label for="escalaAtual"><Para:</Details>:</label>
+    <label for="escalaConvertida">Para:</label>
+        <select id="escalaConvertida">
             <option value="C">Celsius</option>
             <option value="F" selected>Fahrenheit</option>
             <option value="K">Kelvin</option>
+        
+        </select>
 
+        <buttonn type="button">Converter</button>
+        <button type+="reset">Limpar</button>
 
+        </form>
 
-    </form>
         <script src="desafio2.js"></script>
         <script src="desafio3.js"></script>
 
         <script>
-            document.querySelector('#btCalcIMC').addEventListener('click',           function(){
+            document.querySelector('#btCalcIMC').addEventListener('click', function(){
                 const peso = document.querySelector('#peso').value;
                 const altura = document.querySelector('#altura').value;
                 const imc = calculeIMC(peso, altura)
@@ -64,8 +66,10 @@
                          
             });
 
-            document.querySelector('#btlimpaIMC').addEventListener('click,function () {
-                document.querySelector('#resultadoIMC'.innerHTML = 
+            document.querySelector('#btlimpaIMC').addEventListener('click',function () {
+                document.querySelector('#resultadoIMC').innerHTML 
+
+            });
 
         </script>
     </body>
