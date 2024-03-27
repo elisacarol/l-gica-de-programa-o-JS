@@ -41,7 +41,7 @@
          } else {
              window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
          
-         
+    }   
      
      } else if (escalaAtual === 'K') {
      

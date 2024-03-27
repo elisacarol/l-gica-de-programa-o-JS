@@ -13,7 +13,7 @@ então feche com (Ctrl + K e o F sozinho)
 git config --global user.name
 git confib --global user.email
 ~~~
-9. Se as variaveis retonarem algum valor, redefina ambas as variaveis:
+9. Se as variaveis retornarem algum valor, redefina ambas as variaveis:
 ~~~bash
 git config --global --unset user.name
 git config --global --unset user.mail
