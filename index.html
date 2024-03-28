@@ -7,6 +7,9 @@
     </head>
     <body>
         <h1>Programinhas</h1>
+        <!--TODO: eliminar esses botões-->
+        <button type="button" onclick="calcularIMC()">Calculadora IMC</button>
+        <button type="button" onclick="converteTemperatura ()">Conversor Temperatura </button>
     
         <h2>Calculadora IMC</h2>
 
@@ -34,6 +37,7 @@
         <input type="number" id="valorTemperatura">
 
         <label for="escalaAtual">De:</label>
+        <select id="escalaAtual">
             <option value="C">Celsius</option>
             <option value="F" selected>Fahrenheit</option>
             <option value="K">Kelvin</option>
@@ -47,12 +51,12 @@
         
         </select>
 
-        <buttonn type="button" id="bitConverte">Converter</button> // Configurar o botao com id = nome//
-        <button type+="reset">Limpar</button>
+        <buttonn type="button" id="bitConverte">Converter</button> <!--Configurar o botao com id = nome-->
+        <button type+="reset" id="btLimpaTemp">Limpar</button>
 
         </form>
 
-        <div id="resultadoTemp"></div> //instrução que mostrará onde será escrito o resultado //
+        <div id="resultadoTemp"></div> <!--instrução que mostrará onde será escrito o resultado-->
 
         <script src="desafio2.js"></script>
         <script src="desafio3.js"></script>
@@ -78,23 +82,28 @@
 
             // Inicio do desafio 3
 
-            document.querySelector('btConverteTemp').addEventListener('click, function () {
-                const temperaturaAtual = document.querySelector('#valorTemperatura'), value;
-                const escalaAtual = document.querySelector('#escalaAtual'), value;
-                const escalaConvertida = document.querySelector('escalaConvertida'), value;
+            document.querySelector('btConverteTemp').addEventListener('click', function () {
+                const temperaturaAtual = document.querySelector('#valorTemperatura'). value;
+                const escalaAtual = document.querySelector('#escalaAtual'). value;
+                const escalaConvertida = document.querySelector('escalaConvertida'). value;
+
+                const conversao = converteTemperatura(temperaturaAtual, escalaAtual, 
+                escalaConvertida);
 
             // Primeiro as escalas sao relacionadas e depois enviadas para a função CONVERTERTEMPERATURA, será preciso 
             // determinar o retorno da funçao que é CONVERTETEMPERATURA. Vai buscar oque foi relacionado no RETURN que
             // esta no desafio 3.js (o objeto na array JASON - VER)
-{
 
-            document.querySelector('resultadoTemp').innerHTML = `TemperaturaConvertida: $conversão.temperaturaConvertida + escala
+            });
+
+            document.querySelector('#resultadoTemp').innerHTML = `TemperaturaConvertida: ${conversão.temperaturaConvertida + conversao.
             escalaConversao}`; //estes comandos formatam o último botão e a 
             
-            document.querySelector('#btLimpaTemp').addEventListener("click, function ()
-            escalaConversao}`; //estes comandos formatam o último botão e a conversão
+            document.querySelector('#btLimpaTemp').addEventListener('click', function () {
+            document.querySelector('resultadoTemp').innerHTML= ''; //estes comandos formatam o último botão e a conversão
 
             // fim desafio 3
+            });
 
         </script>      
     </body>
