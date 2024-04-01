@@ -56,14 +56,14 @@
          } else {
              msgErro = `ERRO: Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`;
          
-         }
-     
-         } else {
-             msgERRO = `ERRO: A escala ATUAL selecionada: ${escalaAtual}. A escala ATUAL não existe ou não está disponível neste programa`;
-     
          
      
           } else {
+             msgERRO = `ERRO: A escala ATUAL selecionada: ${escalaAtual}. A escala ATUAL não existe ou não está disponível neste programa.`;
+     
+         
+     
+         } else {
              msgErro = `ERRO: O número digitado para conversão não é  um número válido.`;
 
           }
