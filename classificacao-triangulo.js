@@ -1,8 +1,6 @@
 function calculeTriangulo (ladoA, ladoB, ladoC) {
 
-const ladoA = 
-const ladoB = number;
-const ladoC = number;
+
 
 const triangulo = ;
 
