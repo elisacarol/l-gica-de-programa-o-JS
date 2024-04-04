@@ -30,6 +30,8 @@
 
     </div>
 
+</div>
+
         <button type ="button" id="btClassificar">Classificar</button>
         <button type=">reset" id="btlimpar">Limpar</button>
     
@@ -39,10 +41,10 @@
 
 <script>
 
-    document.querySelector('#btClassificar').addEventListener('click', () => {arrow function
+    document.querySelector('#btClassificar').addEventListener('click', () => { // arrow function
 
     //atribuindo  e fazendo o casting
-    const ladoA = (document.querySelector('#ladoA').value):
+    const ladoA = (document.querySelector('#ladoA').value);
     const ladoB = (document.querySelector('#ladoB').value);
     const ladoC = (document.querySelector('#ladoC').value);
 
@@ -53,8 +55,8 @@
     });
 
     document.querySelector('#btLimpar').addEventListener('click', () => {
-        document.querySelector(#resultado').innerHTML = '';
-     {}
+        document.querySelector('#resultado').innerHTML = '';
+     
     });
 
     function classificaTriangulo(ladoA, ladoB, ladoC) {
@@ -62,6 +64,8 @@
         let mensagemErro, tipoTriangulo;
 
         // teste do triangulo
+
+        // If (ladoA <(ladoB + ladoC) && ladoB < (ladoA + ladoC) && ladoC  < (ladoA + ladoB)) 
 
         if (ladoA === ladoB && ladoB === ladoC) {
             
@@ -77,21 +81,14 @@
         }     
 
         // fim classificação
-
-    } else {
-
-        mensagemErro = 'A forma não é um triangulo';
-
-    }
+return tipoTriangulo ?? mensagemErro;
+    }  
         // fim teste do triangulo
 
-    return tipoTriangulo ?? mensagemErro;
+    
         // ?? -> operador de coalescência
 
-     </script>
-(/body)
 </script>
-   
-    
 </body>
+</script>
 </html>

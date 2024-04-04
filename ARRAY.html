@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<p idp>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p> <!--temos que criar dois paragrafos um antes e outro depois
+    do PUSH -->
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        // let carro = "Ford" (apenas um valor)
+        let carros = ["Ford", "VW", "BMW", "Fiat"] // array de strings // cria-se a lista para o Array
+        let ano= [2020, 2023, 2024, 2025] // array de numeros
+        carros[3] = "AlfaRomeo"
+        // e para cada um o computador atribui indices sendo que começa no zero, sendo 
+        // assim a Ford é 0, VW é 1, BMW é 2 e assim sucessivamente e como sei que
+        // os indices sao crescentes e começam com 0 podemos manipular o ARRAY.
+        // Como os indices SEMPRE começam com zero e são crescentes, eu posso manipular os valores
+        // como quisermos
+        document.getElementById("demo1").innerHTML = carros;
+        carros.push("AlfaRomeo");// PUSH acrescenta
+        document.getElementById("demo2").innerHTML = carros; 
+        let carro_removido = carros.pop([2]); // POP remove o último elemento
+        document.getElementById("demo3").innerHTML = carros;
+        document.getElementeById("demo4").innerHTML = carro_removido;
+         
+        // qdo perguntei pela memória carro o sinal = "pergunta qual o valor", o valor "carro" é
+           // colocado pelo innerHTML em "demo" e vai buscar o getElementById em 
+           // carro <p>
+            //Os elementos dentro do ARRAY: LENGTH determina o numero dos elementos (comprimento) do ARRAY
+            //Exemplo: do 0 ao 3 os numeros de elementos dentro de "carros", mesmo sendo 
+            // 4 elementos.  
+    </script>
+
+</body>
+</html>
+
+//ARRAY  tambem conhecido como vetor.
+// Os arrays são coleções de dados lista, conjuntos, enumerações etc.. são conhecidos como
+// coleçoes de dados.
+// As colecoes
+//A variavel e uma memoria que guarda um valor que eu vou usar depois em algum 
+//outro lugar do programa-->
+
+// Ao contrário dos humanos o computador podem alterar o conteudo de memoria e
+//por isso a memoria é chamada de variavel.-->
+//As variaveis comuns registram apenas um valor e já as coleções sao variaveis
+//que registram uma coleçao de valores, isto é mais de um valores-->
+
+//Vamos supor que eu receba um array que eu não criei. Então eu não sei nada dele.
+// Qual seria a primeira coisa que eu precisaria saber sobre ele ?
+// R: o comprimento (tamanho), ou seja a quantidadwe de elementos.
+    
+// Eu posso alterar um elemento especifico do array usando o indice. Como alterar 
+//uma das marcas
+
+// Quando crio o ARRAY , não coloco só os elementos, mas o JS insere uma série de 
+// propriedade e métodos (funçoes) lá dentro.
+
+//Para acrescentar um elemento a lista, eu uso o método PUSH.
+//A sintaxe é 
+//nomedoarray.push(elemento que eu quero acrescentar)
+
+//Se existe como inserir um elemento, existem tambem como remover
+// E essa é a maneira: nomedoarray.pop ()
+// pop () vai sempre remover o último elemento do array e vai retornar esse elemento, o que siginifica que eu posso 
+//captura o elemento removido e armazer numa variavel. 

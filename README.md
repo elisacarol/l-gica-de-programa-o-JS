@@ -197,3 +197,5 @@ formulário e exibindo o resultado na mesma página.
 * Utilize tags <select> para selecionar as escalas atual e de conversão;
 * Utilize um botão para calcular a temperatura;
 * Apresente o resultado logo abaixo do formulário. 
+
+
