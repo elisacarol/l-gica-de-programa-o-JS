@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação Placar</title>
+</head>
+<body>
+    <h1>Classificando o Placar</h1>
+
+    <form action="">
+    <!--Foi criada a FORM porque o botão RESET só funciona dentro 
+    do FORM-->
+
+    <label for="timeA">Digite o placar do time A</label>
+    <input type="number" id="timeA" min="0">
+
+    <label for="timeB">Digite o placar do time B</label>
+    <input type="number" id="timeB" min="0">
+ 
+    <button type="button" id="btEnviar">Enviar</button>
+     
+    <!-- O botão RESET para limpar a tela precisa estar sempre dentro
+    de um FORM para ter a funcionalidade-->
+   
+    <button type="reset" id="limpar">Limpar</button>
+
+    </form>
+
+    <!--reservando um espaço para mostrar o resultado com DIV e
+    criar o ID para localizar lá no script.  -->
+    <div id="mostraResultado"></div>
+    <!--Este espaço entre as tags > < é o INNERHTML-->
+
+<script>
+    //document vai até o HTML e localiza o id do botao enviar
+    document.querySelector('#btEnviar').addEventListener('click', function (){ 
+        const timeA = Number(document.querySelector ('#timeA').value); 
+        const timeB = Number(document.querySelector ('#timeB').value); 
+        // vai no documento (document) e acha para mim o id timeA (querySelecto)
+        // e traz o valor para mim (.value). IM//PORTANTE: A var é CONST porque
+        // o valor já está determinado. E as variaveis tambem podem ser atribuidas
+        // dentro da função - function.
+        //NUMBER colocado para transformar realmente em número a CONST
+
+        const resultado = comparaPlacar (timeA,timeB) 
+        //aqui esta enviando os valores para a function (compara-placar) e recendo
+        //como resultado ela salvará na variavel resultado. Então foram passadas duas
+        //atribuicoes tanto compara-placar como o resultado. 
+        document.querySelector('#mostraResultado').innerHTML = resultado
+        //o INNERHTML vai escrever o que tem dentro do resultado lá 
+        // dentro da caixa de texto "mostraResultado" da DIV    
+    });
+
+    document.querySelector('#reset').adEventListener('click', function(){
+    document.querySelector('#mostraResultado').innerHTML = ''
+    // no INNERHTML coloca '' porque não terá texto nenhum; será limpeza.
+
+    });
+
+    //quando abro () atribuo os valores que ela precisa para fazer desempenhar a funçao]
+    // dela e quando a {} oque a funçao vai fazer com os dois valores
+    // E aqui na function ela esta recebendo os valores de compara-placar 
+    // Entao oque voltou foi do RETURN
+    //
+    // AGORA COMEÇA A LÓGICA:
+    function comparaPlacar(timeA,timeB){
+        let msg;
+        //cria-se o let para reutilizar a variavel em mensagem para otimizar o texto
+        if (timeA > timeB){
+            msg = 'vencedor é o time A';
+        
+        } else if (timeB > timeA){
+            msg = 'vencedor é o time B';
+        // não coloca parenteses no ultimo else porque ele é a consequencia
+        // das condiçoes nao atendidas 
+        }else {
+            msg = 'empate';
+        }
+        // usar o RETURN porque retornar o resultado 
+        return msg;
+
+    
+    }
+</script>
+
+</body>
+</html>
