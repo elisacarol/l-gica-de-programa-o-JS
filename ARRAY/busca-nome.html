@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de um nome</title>
+</head>
+<body>
+    <!-- Abrir um campo para receber o nome-->
+<form action="">
+
+    <label for="nomeInclusao">Nome para incluir</label>
+    <input type="text" id="nomeInclusao"></input> 
+
+    <button type="reset" id="btCadastrar">Cadastrar</button>
+
+    <button type="button" id="btMostrar" > Mostrar </button>
+
+    <div id="resultado"></div>
+
+</form>
+
+<script> 
+    // o uso do querySelector permite buscar pelo id, se fosse class era colocar apenas um pto e 
+    // elemento button seria colocar os atributos de seleção
+
+    let indice = 0; // é como se fosse o endereço (0, 1, 2, 3..)para acessar um indice dentro do vetor
+                // o i e indice da variavel array;  Eu nao consigo acessar um endereço se eu nao tiver
+                // o indice. Nao consigo acessar um valor se eu nao definir o valor. 
+
+    let nomes = []; // array vazio chamado nomes, preciso que i seja igual a 0, e depois disso oque 
+                    // ordenará será o arreio para selecionar de 1 em 1. O array esta fora para ser acessado
+                    // tanto como botao de leitura e entrada. 
+
+    document.querySelector('#btCadastrar').addEventListener
+    ('click', () => {
+
+        if (nome.length < 10) {
+            
+        nomes.push = document.querySelector('#nomeInclusao').value;  
+            
+        } else {                                                     // O PUSH vai buscar automaticamente oque estavamos 
+                                                                    // fazeno manualmemte. 
+            if (nomes.includes(DocumentFragment('#nomeInclusao').value;  
+            
+        }
+         
+                console.log ('ACHEI');
+
+        } else {
+
+                console.log ('NÃO ACHEI')
+        }
+
+                 
+
+    });
+
+    document.querySelector('#btMostrar').addEventListener 
+            ('click', () => {                                   //Este bloco tem que ter o i para pegar cada um dos nomes e atribuir para o 
+                                                                // HTML do resultado
+                                                                //console.log(nomes [i])};
+
+                document.querySelector('#resultado').innerHTML += nomes [i] + '<\br>';
+
+
+        nomes.forEach(nome, () =>{
+
+                document.querySelector('#resultado').innerHTML += nomes [i] + '<\br>'; // Quem controlará o indice ser o FOREAH
+
+        
+        }); 
+
+    // TODO
+    // 1. Quando eu clicar no botao CADASTRAR limpar o input;
+    // 2. Limite de entrada de daos, isto é apenas 10 nomes.
+    // 3. Após o 10o. nome o buscar o proxim nono ;
+    // 4. Exibir se o nome foi encontrado 
+
+
+</script>
+
+
+    <!--como serao armazenados varios valores criar um vetor vazio, vai receber num determinado indice
+     os valores que serão digitados
+
+
+    
+</body>
+</html>
