@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busca de um nome</title>
+    <style>
+        label[for="nome"] {
+
+        }
+    
+
+    </style>
 </head>
 <body>
     <!-- Abrir um campo para receber o nome-->
 <form action="">
 
-    <label for="nomeInclusao">Nome para incluir</label>
-    <input type="text" id="nomeInclusao"></input> 
+    <label for="nome">Nome para incluir</label>
+    <input type="text" id="nome">   
 
     <button type="reset" id="btCadastrar">Cadastrar</button>
 
-    <button type="button" id="btMostrar" > Mostrar </button>
-
-    <div id="resultado"></div>
+    <button type="button" id="btPesquisar"class="oculto">Pesquisar</button>
 
 </form>
+
+    <div id="resultado"></div>
 
 <script> 
     // o uso do querySelector permite buscar pelo id, se fosse class era colocar apenas um pto e 
     // elemento button seria colocar os atributos de seleção
 
-    let indice = 0; // é como se fosse o endereço (0, 1, 2, 3..)para acessar um indice dentro do vetor
+                 // é como se fosse o endereço (0, 1, 2, 3..)para acessar um indice dentro do vetor
                 // o i e indice da variavel array;  Eu nao consigo acessar um endereço se eu nao tiver
                 // o indice. Nao consigo acessar um valor se eu nao definir o valor. 
 
@@ -33,36 +40,47 @@
                     // tanto como botao de leitura e entrada. 
 
     document.querySelector('#btCadastrar').addEventListener
-    ('click', () => {
+    ('click', () =>{
 
-        if (nome.length < 10) {
-            
-        nomes.push = document.querySelector('#nomeInclusao').value;  
-            
-        } else {                                                     // O PUSH vai buscar automaticamente oque estavamos 
-                                                                    // fazeno manualmemte. 
-            if (nomes.includes(DocumentFragment('#nomeInclusao').value;  
-            
+        nomes.push(document.querySelector('#nome')).value;          // O PUSH vai buscar automaticamente oque estavamos 
+                                                                    // fazeno manualmemte.
+
+        if (nomes.length == 10) {           
+
+
+            document.querySelector('label[for="name"]').innerHTML       // Esta tag ('label[for="name"]') é um seletor de estilo
+            = 'Nome para pesquisar';                                    // Depois que eu tiver os 10 nomes troca o texto do botao cadastrar para pesquisar
+       
+            document.querySelector('#Cadastrar').classList.add          //CLASSLIST para acessar a lista de classe dos elementos
+            ('oculto');
+
+            document.querySelector('#Cadastrar').classList.remove       //REMOVE ao atingir 10 nomes 
+            ('oculto');
+    
         }
-         
-                console.log ('ACHEI');
+
+
+    document.querySelector('#btPesquisar').addEventListener 
+            ('click', () => {                                           //Este bloco tem que ter o i para pegar cada um dos nomes e atribuir para o 
+                                                                        // HTML do resultado
+                                                                        //console.log(nomes [i])};
+        const nomeBuscar = document.querySelector ('#nome').value        
+
+        // INCLUDES retornará para o verdadeiro ou falso e o INDEXOF busca o elemento e mostra 
+        if (nomes.includes (nomeBuscar)) {
+
+            document.querySelector('#resultado').innerHTML =
+            'ACHEI na posição' ${nomes.indexof(nomeBuscado)},
+            ${nomes.indexof(nomeBuscado)};
 
         } else {
 
-                console.log ('NÃO ACHEI')
+            document.querySelector('#resultado').innerHTML =
+            'NAO ACHEI';
+
         }
 
-                 
-
-    });
-
-    document.querySelector('#btMostrar').addEventListener 
-            ('click', () => {                                   //Este bloco tem que ter o i para pegar cada um dos nomes e atribuir para o 
-                                                                // HTML do resultado
-                                                                //console.log(nomes [i])};
-
                 document.querySelector('#resultado').innerHTML += nomes [i] + '<\br>';
-
 
         nomes.forEach(nome, () =>{
 
@@ -78,11 +96,11 @@
     // 4. Exibir se o nome foi encontrado 
 
 
-</script>
+    </script>
 
 
-    <!--como serao armazenados varios valores criar um vetor vazio, vai receber num determinado indice
-     os valores que serão digitados
+    //como serao armazenados varios valores criar um vetor vazio, vai receber num determinado indice
+     //os valores que serão digitados
 
 
     
