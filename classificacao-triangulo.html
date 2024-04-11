@@ -3,77 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Classificação de um triângulo</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 
     <script src="classificacao-triangulo.js"></script>
 
 </head>
 <body>
-    <h1>Classifica de um triangulo</h1>
 
-<form action="">    
+    <a href="index.html">Home</a>
+    <h1 class="titulo-pagina">Classifica de um triangulo</h1>
+
+<main>
+
+<form action=".">    
 
     <div class="elementos-em-linha">
 
         <div class="controle-form">
-        <label for="ladoA">ladoA:</label>
-        <input type="number" id="ladoA" min="0"> 
+            <label for="ladoA">ladoA:</label>
+            <input type="number" id="ladoA" min="0"> 
         <!-- O input precisa do ID para ser encontrado pelo JS no DOM -->
+        </div>
 
         <div class="controle-form">
-        <label for="ladoB">ladoB:</label>
-        <input type="number" id="ladoB" min="0">
+            <label for="ladoB">ladoB:</label>
+            <input type="number" id="ladoB" min="0">
+        </div>
 
         <div class="controle-form">
-        <label for="ladoC">ladoC:</label>
-        <input type="number" id="ladoC" min="0">
+            <label for="ladoC">ladoC:</label>
+            <input type="number" id="ladoC" min="0">
+        </div>
 
-    </div>
+    </form>
 
-</div>
+    <div id="resultado"></div>
 
-        <button type ="button" id="btClassificar">Classificar</button>
-        <button type=">reset" id="btlimpar">Limpar</button>
-    
-</form>
-
-<div id="resultado"></div>
+</main>
 
 <script>
 
-    document.querySelector('#btClassificar').addEventListener('click', () => { // arrow function
+    document.querySelector('#btClassificar').addEventListener ('click', () => { // arrow function
 
-    //atribuindo  e fazendo o casting
-    const ladoA = (document.querySelector('#ladoA').value);
-    const ladoB = (document.querySelector('#ladoB').value);
-    const ladoC = (document.querySelector('#ladoC').value);
+        // atribuindo e fazendo o casting
+        const ladoA = Number(document.querySelector('#ladoA').value);
+        const ladoB = Number(document.querySelector('#ladoB').value);
+        const ladoC = Number(document.querySelector('#ladoC').value);
 
-    const classificacao = classificaTriangulo(ladoA, ladoB, ladoC);
+        const classificacao = classificacaoTriangulo(ladoA, ladoB, ladoC);
 
-    document.querySelector('#resultado').innerHTML = classificacao;
+        document.querySelector('#resultado').innerHTML = classificacao;
 
     });
 
     document.querySelector('#btLimpar').addEventListener('click', () => {
         document.querySelector('#resultado').innerHTML = '';
-     
     });
 
-    function classificaTriangulo(ladoA, ladoB, ladoC) {
 
+    function classificaTriangulo(ladoA, ladoB, ladoC) {
+        
         let mensagemErro, tipoTriangulo;
 
         // teste do triangulo
 
-        // If (ladoA <(ladoB + ladoC) && ladoB < (ladoA + ladoC) && ladoC  < (ladoA + ladoB)) 
+        if (ladoA <(ladoB + ladoC) && ladoB < (ladoA + ladoC) && ladoC  < (ladoA + ladoB)) { 
+
+        // classificação
 
         if (ladoA === ladoB && ladoB === ladoC) {
             
-            tipoTriangulo = 'Equilatero';
+            tipoTriangulo = 'Equilátero';
 
         }else if (ladoA === ladoB ||ladoB === ladoC || ladoA === ladoC) {
             
-            tipoTriangulo = 'Isoceles';
+            tipoTriangulo = 'Isóceles';
         
         } else {
 
@@ -81,16 +87,18 @@
         }     
 
         // fim classificação
-return tipoTriangulo ?? mensagemErro;
-    }  
-        // fim teste do triangulo
 
-    
-        // ?? -> operador de coalescência
+    } else { 
 
+        mensagemErro = 'A forma não é um triângulo';
+    }
 
-</script>
+    // fim do teste do triângulo
+    return tipoTriangulo ?? mensagemErro;
+      
+    // ?? -> operador de coalescência
 
+}
+    </script>
 </body>
-</script>
 </html>

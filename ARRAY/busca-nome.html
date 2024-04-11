@@ -6,7 +6,11 @@
     <title>Busca de um nome</title>
     <style>
         label[for="nome"] {
+            color: blue;
+        }
 
+        .oculto {
+            display: none;
         }
     
 
@@ -17,7 +21,7 @@
 <form action="">
 
     <label for="nome">Nome para incluir</label>
-    <input type="text" id="nome">   
+    <input type="text" id="nome" required autofocus>   
 
     <button type="reset" id="btCadastrar">Cadastrar</button>
 
@@ -39,55 +43,67 @@
                     // ordenará será o arreio para selecionar de 1 em 1. O array esta fora para ser acessado
                     // tanto como botao de leitura e entrada. 
 
-    document.querySelector('#btCadastrar').addEventListener
-    ('click', () =>{
+    document.addEventListener('keydown', (evento) => {
+    
+        if (evento.key === 'Enter') {
 
-        nomes.push(document.querySelector('#nome')).value;          // O PUSH vai buscar automaticamente oque estavamos 
+            evento.preventDefault();
+
+            if (nomes.length <10) {
+        
+                document.querySelector('#btCadastrar').click();
+            }else{
+
+                document.querySelector('#btPesquisar').click();
+            }
+        }
+    });
+
+    document.querySelector('#btCadastrar').addEventListener('click', () => {
+
+        nomes.push(document.querySelector('#nome').value);          // O PUSH vai buscar automaticamente oque estavamos 
                                                                     // fazeno manualmemte.
-
+        // ao atingir 10 nomes...
         if (nomes.length == 10) {           
 
-
+        
+            // Troque a label do input "nome"
             document.querySelector('label[for="name"]').innerHTML       // Esta tag ('label[for="name"]') é um seletor de estilo
             = 'Nome para pesquisar';                                    // Depois que eu tiver os 10 nomes troca o texto do botao cadastrar para pesquisar
-       
-            document.querySelector('#Cadastrar').classList.add          //CLASSLIST para acessar a lista de classe dos elementos
+            
+            // Oculte o botão pesquisar
+            document.querySelector('#btCadastrar').classList.add          //CLASSLIST para acessar a lista de classe dos elementos
             ('oculto');
 
-            document.querySelector('#Cadastrar').classList.remove       //REMOVE ao atingir 10 nomes 
+            // Desoculte o botão pesquisar
+            document.querySelector('#btPesquisar').classList.remove       //REMOVE ao atingir 10 nomes 
             ('oculto');
     
         }
+    });
 
 
     document.querySelector('#btPesquisar').addEventListener 
             ('click', () => {                                           //Este bloco tem que ter o i para pegar cada um dos nomes e atribuir para o 
                                                                         // HTML do resultado
                                                                         //console.log(nomes [i])};
-        const nomeBuscar = document.querySelector ('#nome').value        
+        const nomeBuscado = document.querySelector ('#nome').value;        
 
         // INCLUDES retornará para o verdadeiro ou falso e o INDEXOF busca o elemento e mostra 
+        // condição alternativa: (nomes.indexOf(nomeBuscado) => 0)
         if (nomes.includes (nomeBuscar)) {
 
             document.querySelector('#resultado').innerHTML =
-            'ACHEI na posição' ${nomes.indexof(nomeBuscado)},
-            ${nomes.indexof(nomeBuscado)};
+            `ACHEI na posição' ${nomes.indexOf(nomeBuscado)},
+            "${nomes[nomes.indexOf(nomeBuscado)]}"`;
 
         } else {
 
             document.querySelector('#resultado').innerHTML =
             'NAO ACHEI';
-
         }
 
-                document.querySelector('#resultado').innerHTML += nomes [i] + '<\br>';
-
-        nomes.forEach(nome, () =>{
-
-                document.querySelector('#resultado').innerHTML += nomes [i] + '<\br>'; // Quem controlará o indice ser o FOREAH
-
-        
-        }); 
+ }); 
 
     // TODO
     // 1. Quando eu clicar no botao CADASTRAR limpar o input;
@@ -97,12 +113,5 @@
 
 
     </script>
-
-
-    //como serao armazenados varios valores criar um vetor vazio, vai receber num determinado indice
-     //os valores que serão digitados
-
-
-    
 </body>
 </html>
