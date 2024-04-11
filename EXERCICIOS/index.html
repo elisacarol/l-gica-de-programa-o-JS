@@ -36,11 +36,12 @@
     
         </form>
 
-    <div id="resultadoIMC"></div><!--DENTRO DESTE ID NÃO COLOCAREMOS NADA PORQUE SERÁ O JS QUE COLOCARÁ-->
+        <div id="resultadoIMC"></div><!--DENTRO DESTE ID NÃO COLOCAREMOS NADA PORQUE SERÁ O JS QUE COLOCARÁ-->
 
-    <h2> Conversor de Temperatura</h2>
+        <h2> Conversor de Temperatura</h2>
 
-    <form action="">
+        <form action="">
+
         <label for="valorTemperatura">Temperatura:</label>
         <input type="number" id="valorTemperatura">
 
@@ -53,8 +54,8 @@
 
     <label for="escalaConvertida">Para:</label>
         <select id="escalaConvertida">
-            <option value="C">Celsius</option>
-            <option value="F" selected>Fahrenheit</option>
+            <option value="C" selected>Celsius</option>
+            <option value="F">Fahrenheit</option>
             <option value="K">Kelvin</option>
         
         </select>
@@ -108,7 +109,7 @@
         
 
             document.querySelector('#resultadoTemp').innerHTML = `TemperaturaConvertida: ${conversão.temperaturaConvertida + conversao.
-            grauEscala ?'' : '') + conversao.EscalaConversao}`; 
+            grauEscala ?'' : ''} + conversao.EscalaConversao}`; 
 
             } else {
 

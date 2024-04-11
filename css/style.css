@@ -101,11 +101,7 @@ button:active {
     color: #ffffff;
 }
 
-.acao-negagiva {
-    background-color: #e85391;
-}
-
-.acao-negativa:hover {
+.acao-negagiva:hover {
     background-color: #e85391;
 }
 

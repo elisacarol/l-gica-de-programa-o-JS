@@ -13,8 +13,6 @@
     <label for="valorCompra">Digite o valor compra</label>
     <input type="number" id="valorCompra" min="0">
 
-
-
     <button type="button" id="btEnviar">Enviar</button>
 
     <button type="reset" id="limpar">Limpar</button>
@@ -25,11 +23,11 @@
 
     <script>
         document.querySelector('#btEnviar').addEventListener('click', function (){ 
-        const cliente1 = valorCompra; 
-        const funcionario2 = valorCompra; 
-        const clienteVip3 = valorCompra;
+        const cliente1 = Number(document.querySelector ('valorCompra').value);; 
+        const funcionario2 = Number(document.querySelector('valorCompra').value); 
+        const clienteVip3 = Number(document.querySelector('valorCompra').value);
 
-        const resultado = valorCompra (cliente1, funcionario2, clienteVip3)
+        const resultado = classificaoCliente (cliente1, funcionario2, clienteVip3)
 
         document.querySelector('#mostraResultado').innerHTML = resultado
 
@@ -40,7 +38,7 @@
 
     });
 
-    function valorCompra (cliente1, funcionario2, clienteVip3){
+    function classificacao (cliente1, funcionario2, clienteVip3){
         let = msg
     
     if (clienteVip3) {
@@ -48,8 +46,7 @@
 
     }else if (funcionario2) {
             msg = (`resultado: ${valorCompra *10/100} --> Funcionario`);
-    
-    
+        
     } else {
             msg = (`resultado1: ${valorCompra} --> Cliente )`);
 

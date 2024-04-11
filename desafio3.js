@@ -3,12 +3,16 @@
     
      //a const anterior foi cancelada porque o CONVERTETEMPERATURA CONVERTERÁ 
      
-    let temperaturaConvertida, msgErro = 'OK';
+    let 
+    temperaturaConvertida, 
+    msgErro = 'OK',
+    grauEscala = escalaConversao !== 'K' ? true : false;
 
      if (!isNaN (temperaturaAtual)) { //se não é não 
      
          escalaAtual = escalaAtual.toUpperCase();
          escalaConversao = escalaConversao.toUpperCase();
+         temperaturaAtual = Number(temperaturaAtual);
      
      if (escalaAtual === 'C') {
      
@@ -48,7 +52,7 @@
             temperaturaConvertida = temperaturaAtual - 273.15;
              
          } else if (escalaConversao === 'F') {
-            temperaturaConvertida  = temperaturaAtual * 5 / 9 - 459.67};
+            temperaturaConvertida  = temperaturaAtual * 9 / 5 - 459.67;
                  
          } else if (escalaConversao === 'K'){
              msgErro = `ERRO: Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`;
@@ -56,17 +60,18 @@
          } else {
              msgErro = `ERRO: Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`;
          
+         }
          
      
           } else {
              msgERRO = `ERRO: A escala ATUAL selecionada: ${escalaAtual}. A escala ATUAL não existe ou não está disponível neste programa.`;
      
-         
+          }
      
          } else {
-             msgErro = `ERRO: O número digitado para conversão não é  um número válido.`;
+             msgErro = 'ERRO: O número digitado para conversão não é  um número válido.';
 
-          }
+         }
 
      // retornando em JASON - JavaScript Object Notation - retornando o objeto em JASON
      
@@ -75,6 +80,7 @@
         escalaAtual: escalaAtual,
         escalaConversao: escalaConversao,
         temperaturaConvertida: temperaturaConvertida,
+        grauEscala: grauEscala,
         msgErro: msgErro,
     }
 
