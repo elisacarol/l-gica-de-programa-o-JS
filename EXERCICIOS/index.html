@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Desafios e Exercícios</title>
     </head>
     <body>
-        <h1>Programinhas</h1>
-        <!--TODO: eliminar esses botões-->
-        <button type="button" onclick="calcularIMC()">Calculadora IMC</button>
-        <button type="button" onclick="converteTemperatura ()">Conversor Temperatura </button>
+        <h1>Desafios e Exercícios</h1>
+
+        <h2>Exercìcios</h2>
+
+    <nav>
+        <ul>
+            <li><a href="classificacao-triangulo.html">Exercicio 1 - Classificação de um triângulo </a></li>
+            <li><a href="busca-nome.html">Exercicio 4 - Busca nome</a></li>
+
+        </ul>
+    </nav>
+        
     
         <h2>Calculadora IMC</h2>
 
@@ -51,7 +59,7 @@
         
         </select>
 
-        <button type="button" id="bitConverte">Converter</button> <!--Configurar o botao com id = nome-->
+        <button type="button" id="bitConverteTemp">Converter</button> <!--Configurar o botao com id = nome-->
         <button type+="reset" id="btLimpaTemp">Limpar</button>
 
         </form>
@@ -90,14 +98,27 @@
                 const conversao = converteTemperatura(temperaturaAtual, escalaAtual, 
                 escalaConvertida);
 
-            // Primeiro as escalas sao relacionadas e depois enviadas para a função CONVERTERTEMPERATURA, será preciso 
+            // Trata,emtp de erros Desafio 3
+            if (Conversao.msgErro === 'Ok') {
+
+                        // Primeiro as escalas sao relacionadas e depois enviadas para a função CONVERTERTEMPERATURA, será preciso 
             // determinar o retorno da funçao que é CONVERTETEMPERATURA. Vai buscar oque foi relacionado no RETURN que
             // esta no desafio 3.js (o objeto na array JASON - VER)
 
-            });
+        
 
             document.querySelector('#resultadoTemp').innerHTML = `TemperaturaConvertida: ${conversão.temperaturaConvertida + conversao.
-            escalaConversao}`; //estes comandos formatam o último botão e a 
+            grauEscala ?'' : '') + conversao.EscalaConversao}`; 
+
+            } else {
+
+                document.querySelector('#resultadoTemp').innerHTML = conversao.msgErro;
+
+            }
+
+        });
+
+            //estes comandos formatam o último botão e a 
             
             document.querySelector('#btLimpaTemp').addEventListener('click', function () {
             document.querySelector('resultadoTemp').innerHTML= ''; //estes comandos formatam o último botão e a conversão

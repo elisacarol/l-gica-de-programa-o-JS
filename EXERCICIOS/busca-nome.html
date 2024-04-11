@@ -15,15 +15,15 @@
         }
 
         .oculto {
-            background-color: blue;
+            background-color: #5cf561;
         }
 
-        .acao-alternativa{
-            background-color: aqua;
+        .acao-alternativa:hover{
+            background-color: #5cf561;
         }
 
-        .acao-alternativa{
-            background-color: blue;
+        .acao-alternativa:active{
+            background-color: #2adf30;
         }
 
     </style>
@@ -37,17 +37,20 @@
 
 <form action="">
 
-    <aside
+    <div class="contole-form">
     <label for="nome">Nome para incluir</label>
     <input type="text" id="nome" required autofocus>   
 
     <button type="reset" id="btCadastrar">Cadastrar</button>
 
-    <button type="button" id="btPesquisar"class="oculto">Pesquisar</button>
+    <button type="button" id="btPesquisar"class="oculto acao-alternativa">Pesquisar</button>
+    </div>
 
 </form>
 
     <div id="resultado"></div>
+
+</main>
 
 <script> 
     // o uso do querySelector permite buscar pelo id, se fosse class era colocar apenas um pto e 
