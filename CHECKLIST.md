@@ -38,3 +38,40 @@ git config user.email "elisacarol"
 ~~~
 3. git commit -m "documento de instrução"
 4. git push origin.main
+
+# COMMIT 
+
+Como escrever o GIT COMMIT com varios
+=> git add  
+=> git commit -m"style: estilizando as páginas gerais do projeto"
+=> git status
+
+Agora fazer o README.md
+=> git add README.md
+=> git commit -m"docs:acrescentando a documentação da ulitima modificação"
+=> git status
+
+agora somente no que eu fiz correção:
+=> git add desafio3.js
+=> git commit -
+
+mudar o padrao do editor 
+=> git add exercicios/busca-nome.html
+=> git config --global core.editor "code --wait" ( está orientando o editor padrão muda ele para o VSCode)
+
+=> git commit
+=> abrirá a mensagem e nela digitar => abrirá o feat (para declarar a alteração): melhoria no botão da página busca-nome
+    Implementada uma melhoria na descrição do botão que realiza a açõao de confimarção 
+=> clicaabrirá a mensagem e nela digitarr no botão de aceitar
+
+Volta o git status:
+
+=> git add .
+=> git commit => : chore: criando o arquivo para o próximo desafio
+
+para ver a estrutura de Commits atualizar o VS Code com Git Graph
+
+para apagar os commits digitar:
+=> git rebase -i HEAD~5 (modifica o histórico do GIT)
+
+Usar a plataforma para aprender o Learn Git Branching

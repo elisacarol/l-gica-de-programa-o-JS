@@ -16,7 +16,18 @@
     <button type="button" id="btEnviar">Enviar</button>
 
     <button type="reset" id="limpar">Limpar</button>
+   
+       
+    <label for="classificacao">Classificação consumidor</label>
 
+    <select name="consumidor" id="consumidor">
+    <option value="cliente">cliente</option>
+    <option value="funcionario">funcionário</option>
+    <option value="clienteVip">clienteVip</option>
+    
+    </select>
+
+    <label for="compraDesconto">Valor compra com desconto</label>
     </form>
 
     <div id="mostraResultado"></div>
@@ -38,7 +49,8 @@
 
     });
 
-    function classificacao (cliente1, funcionario2, clienteVip3){
+    
+    function classificacaoClient (cliente1, funcionario2, clienteVip3){
         let = msg
     
     if (clienteVip3) {

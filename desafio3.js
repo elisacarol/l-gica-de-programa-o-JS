@@ -1,7 +1,6 @@
  function converteTemperatura (temperaturaAtual, escalaAtual, escalaConversao){ //transformar esta funçao para converter a temperatura e passaremos os dados para ela
                                                                                 //virará um parametro
-    
-     //a const anterior foi cancelada porque o CONVERTETEMPERATURA CONVERTERÁ 
+    //a const anterior foi cancelada porque o CONVERTETEMPERATURA CONVERTERÁ 
      
     let 
     temperaturaConvertida, 
