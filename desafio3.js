@@ -67,7 +67,7 @@
      
           }
      
-         } else {
+        } else {
              msgErro = 'ERRO: O número digitado para conversão não é  um número válido.';
 
          }
@@ -82,5 +82,7 @@
         grauEscala: grauEscala,
         msgErro: msgErro,
     }
+
+
 
     // ARRAY - LISTA DE INFORMAÇÕES CONJUNTO DE DADOS USA-SE {} PARA INFORMAÇÕES SEPARADAS

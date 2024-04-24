@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
-        label[for="nome"] {
-            color: blue;
-        }
-
         .oculto {
             display: none;
         }
@@ -40,12 +36,14 @@
 <form action="">
 
     <div class="contole-form">
-    <label for="nome">Nome para incluir</label>
-    <input type="text" id="nome" required autofocus>   
+        <label for="nome">Nome para incluir</label>
+        <input type="text" id="nome" required autofocus> 
+    </div>
+    
+    <div class="botoes">
+        <button type="reset" id="btCadastrar">Cadastrar</button>
 
-    <button type="reset" id="btCadastrar">Cadastrar</button>
-
-    <button type="button" id="btPesquisar"class="oculto acao-alternativa">Pesquisar</button>
+        <button type="button" id="btPesquisar"class="oculto acao-alternativa">Pesquisar</button>
     </div>
 
 </form>
@@ -66,13 +64,13 @@
                     // ordenará será o arreio para selecionar de 1 em 1. O array esta fora para ser acessado
                     // tanto como botao de leitura e entrada. 
 
-    document.addEventListener('keydown', (evento) => {
+        document.addEventListener('keydown', (evento) => {
     
-        if (evento.key === 'Enter') {
+            if (evento.key === 'Enter') {
 
-            evento.preventDefault();
+                evento.preventDefault();
 
-            if (nomes.length <10) {
+            if (nomes.length < 10) {
         
                 document.querySelector('#btCadastrar').click();
             
@@ -86,7 +84,7 @@
     document.querySelector('#btCadastrar').addEventListener('click', () => {
 
         nomes.push(document.querySelector('#nome').value);          // O PUSH vai buscar automaticamente oque estavamos 
-                                                                    // fazeno manualmemte.
+                                                                    // fazendo manualmemte.
         // ao atingir 10 nomes...
         if (nomes.length == 10) {           
 
@@ -115,7 +113,7 @@
 
         // INCLUDES retornará para o verdadeiro ou falso e o INDEXOF busca o elemento e mostra 
         // condição alternativa: (nomes.indexOf(nomeBuscado) => 0)
-        if (nomes.includes (nomeBuscar)) {
+        if (nomes.includes (nomeBuscado)) {
 
             document.querySelector('#resultado').innerHTML =
             `ACHEI na posição' ${nomes.indexOf(nomeBuscado)},
