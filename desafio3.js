@@ -68,7 +68,7 @@
           }
      
         } else {
-             msgErro = 'ERRO: O número digitado para conversão não é  um número válido.';
+             msgErro = `ERRO: O número digitado para conversão não é  um número válido.`;
 
          }
 
