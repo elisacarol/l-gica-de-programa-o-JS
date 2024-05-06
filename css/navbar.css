@@ -49,4 +49,54 @@
 
 .breadcrumbs {
     height: 50px;
+<<<<<<< HEAD
+=======
+}
+
+.breadcrumbs>ul {
+    height: 100%;
+    display: flex;
+    margin-inline-start: 1.5rem;
+}
+
+.breadcrumbs li {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: ">";
+} /* aplica para todos os elementos, menos (não) para o último filho */
+
+.breadcrumbs li:not(:last-child)>a {
+    color: #777;
+} /* aplica para todo <a> filho de <li>, menos (não) para o <a> filho do <li> que é último filho, descendente de .breadcrumbs */
+
+.breadcrumbs a {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.breadcrumbs li:last-child>a {
+    background-color: #38393C;
+    color: azure;
+    padding: 8px;
+    border-radius: 16px;
+    margin-inline-start: 8px;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.breadcrumbs li:last-child>a:hover {
+    text-decoration: none;
+    cursor:default;
+}  
+
+.breadcrumbs li:last-child>a:hover {
+    text-decoration: none;
+    cursor: default;
+>>>>>>> refs/remotes/origin/main
 }
