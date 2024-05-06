@@ -34,7 +34,7 @@ FINALIZAR
 2. Configurar email/usuario antes de fazer o commit
 ~~~bash
 git config user.name "elisacarol"
-git config user.email "elisacarol"
+git config user.email "carolina_sec21@hotmail.com"
 ~~~
 3. git commit -m "documento de instrução"
 4. git push origin.main
