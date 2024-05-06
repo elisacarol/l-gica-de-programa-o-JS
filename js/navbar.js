@@ -1,14 +1,32 @@
 const ancoras = [
     { "url": "/index.html", "texto": "Home"},
-    { "url": "/exercicios/exercicio1.html", "texto": "Exerc. 1"},
-    { "url": "/exercicios/exercicio6.html", "texto": "Exerc. 6"}
+    { "url": "/EXERCICIOS/exercicio1.html", "texto": "Exerc. 1"},
+    { "url": "/EXERCICIOS/exercicio2.html", "texto": "Exerc. 2"},
+    { "url": "/EXERCICIOS/exercicio3.html", "texto": "Exerc. 3"},
+    { "url": "/EXERCICIOS/exercicio4.html", "texto": "Exerc. 4"},
+    { "url": "/EXERCICIOS/exercicio5.html", "texto": "Exerc. 5"},
+    { "url": "/EXERCICIOS/exercicio6.html", "texto": "Exerc. 6"},
+    { "url": "/EXERCICIOS/exercicio7.html", "texto": "Exerc. 7"}
+    
 ];
 
 function criaAncora(url, texto) {
+
+    const ancora = document.createElement('a');
+    ancora.setAttribute('href', url);
+    ancora.innerHTML = texto;
+
+    return ancora;
 }
 
+// Crie uma função e a utilize para gerar os elementos do tipo <li>
 function criaLi(ancora) {
-}    
+    
+    const li = document.createElement('li');
+    li.appendChild(ancora);
+    
+    return li;
+}  
     
 function criaUlNav(ancora) {
 
@@ -80,21 +98,3 @@ linkNavbar.setAttribute('rel', 'stylesheet');
 linkNavbar.setAttribute('href', '/css/navbar.css');
 
 document.head.appendChild(linkNavbar);
-
-function criaAncora(url, texto) {
-
-    const ancora = document.createElement('a');
-    ancora.setAttribute('href', url);
-    ancora.innerHTML = texto;
-
-    return ancora;
-}
-
-// Crie uma função e a utilize para gerar os elementos do tipo <li>
-function criaLi(ancora) {
-    
-    const li = document.createElement('li');
-    li.appendChild(ancora);
-    
-    return li;
-}

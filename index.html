@@ -6,10 +6,12 @@
     <title>Desafios e Exercícios</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="Stylesheet" href="/css/navbar.css">
+    <link rel="Stylesheet" href="/css/responsividade.css">
+    <script src="/js/estilos.js"></script>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div class="logo-menu">
 
             <div class="logo">
@@ -19,7 +21,8 @@
             <nav class="menu-navegacao">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                    <li><a href="/exercicios/exercicio1.html">Exerc. 1</a></li>
+                    <li><a href="/EXERCICIOS/exercicio1.html">Exerc. 1</a></li>
+                    <li><a href="/EXERCICIOS/exercicio6.html">Exerc. 6</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,11 +37,11 @@
                 <li><a href="#">Interfaces Web</a></li>
             </ul>
         </div>
-    </header>
+    </header> -->
 
-    <h1>Desafios e Exercícios</h1>
+    <h1 class="titulo-pagina">Desafios e Exercícios</h1>
 
-    <h2>Exercícios</h2>
+        <h2>Exercícios</h2>
 
     <h3>Calculadora de IMC</h3>
 
@@ -73,11 +76,12 @@
         </select>
 
         <label for="escalaConvertida">Para:</label>
-        <select id="escalaConvertida">
+        <input list="escalas" id="escalaConvertida">
+        <datalist id="escalas"></datalist> <!--o list do input tem que ser o mesmo do datalis, então tem que criar o input antes-->
             <option value="C">Celsius</option>
             <option value="F" selected>Fahrenheit</option>
             <option value="K">Kelvin</option>
-        </select>
+        </datalist>
 
         <button type="button" id="btConverteTemp">Converter</button>
         <button type="reset" id="btLimpaTemp">Limpar</button>

@@ -49,8 +49,6 @@
 
 .breadcrumbs {
     height: 50px;
-<<<<<<< HEAD
-=======
 }
 
 .breadcrumbs>ul {
@@ -98,5 +96,4 @@
 .breadcrumbs li:last-child>a:hover {
     text-decoration: none;
     cursor: default;
->>>>>>> refs/remotes/origin/main
 }
